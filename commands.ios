@@ -1,0 +1,23 @@
+aaa new-model
+aaa group server radius ISE
+ server <ISE_IP_ADDRESS>
+ ip radius source-interface <INTERFACE>
+aaa authentication login default local group radius
+aaa authentication dot1x default local group radius
+aaa authorization network default local group radius 
+aaa authorization network auth-list local group radius 
+aaa authorization auth-proxy default group radius 
+aaa accounting dot1x default start-stop group radius
+aaa server radius dynamic-author
+ client <ISE_IP_ADDRESS> server-key <KEY>
+username <USERNAME> password 0 <PASSWORD>
+ip radius source-interface GigabitEthernet0/0 
+radius-server attribute 6 on-for-login-auth
+radius-server attribute 6 support-multiple
+radius-server attribute 8 include-in-access-req
+radius-server attribute 25 access-request include
+radius-server dead-criteria time 30 tries 3
+radius server ISE
+ address ipv4 <ISE_IP_ADDRESS auth-port 1812 acct-port 1813
+ automate-tester username <USERNAME> probe-on
+ key <KEY>
