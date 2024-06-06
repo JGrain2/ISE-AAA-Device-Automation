@@ -1,6 +1,6 @@
 # Auto-Add Network Devices to Cisco ISE
 
-Welcome to the Auto-Add Network Devices to Cisco ISE project! This set of Python scripts helps automate the process of adding network devices to Cisco Identity Services Engine (ISE) using Netmiko for SSH connections and various Python libraries for configuration management and API interactions.
+This set of Python scripts helps automate the process of adding network devices to Cisco Identity Services Engine (ISE) using Netmiko for SSH connections and various Python libraries for configuration management and API interactions.
 
 ## Table of Contents
 
